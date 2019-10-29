@@ -80,7 +80,7 @@ while player is False:
 
 	elif computer_lives is 0: 
 		print("You have won the game! Would you like to play again?")
-		choice = input("Y / N ?")	
+		choice = input("Y / N?")	
 		print(choice)
 
 		if (choice is "N") or (choice is "n"):
