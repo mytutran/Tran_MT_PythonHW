@@ -11,6 +11,10 @@ computer= choices[randint(0,2)]
 player = False
 while player is False:
 	#set player to True
+	print("+++++++++++++++++++++++++++++++++++++++++")
+	print("Choose your weapon!\n\n")
+
+
 	player = input("Choose Rock, Paper or Scissors\n")
 
 	print("Computer chose", computer, "\n")
