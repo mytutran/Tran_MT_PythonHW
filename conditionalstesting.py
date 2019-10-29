@@ -25,23 +25,23 @@ while player is False:
 	elif computer == player:
 		print("Draw!")
 
-	elif player.lower() == "rock":
-		if computer == "Paper":
-				print("You lose!", computer, "covers", player, "\n")
-		else:
-				print("You win!", player, "smashes", computer, "\n")
+	elif (player == "Scissors" and computer == "Rock"):
+		print("You lose!")
+	
+	elif (player == "Scissors" and computer == "Paper"):
+		print("You win!")
 
-	elif player.lower() == "scissors":
-		if computer == "Rock":
-			print("You lose!", computer, "smashes", player, "\n")
-		else:
-				print("You win!", player, "cuts", computer, "\n")
+	elif (player == "Paper" and computer == "Rock"):
+		print("You win!")
 
-	elif player.lower() == "paper":
-		if computer == "Scissors":
-			print("You lose!", computer, "cuts", player, "\n")
-		else:
-				print("You win!", player, "covers", computer, "\n")	
+	elif (player == "Paper" and computer == "Scissors"):
+		print("You lose!")
+
+	elif (player == "Rock" and computer == "Scissors"):
+		print("You win!")
+
+	elif (player == "Paper" and computer == "Scissors"):
+		print("You lose!")			
 
 	else:
 		print("That's not a valid choice, try again.")			
