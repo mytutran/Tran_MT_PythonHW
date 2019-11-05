@@ -1,5 +1,4 @@
-
-def compare(choice)
+def compare(weapon)
 	print("called compare weapons")
 		if player.lower() == "Quit":
 				exit()
