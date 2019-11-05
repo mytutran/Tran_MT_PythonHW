@@ -27,7 +27,8 @@ def winorlose(status):
 		
 	else:
 			print("That's not a valid choice! Input 'Y' or 'N'")
-			
+			choice = input("Y / N ?")	
+			print(choice)
 
 
 		
