@@ -1,33 +1,42 @@
 from random import randint
+from gameFunctions import config
+config.glovar()
 # define a python function that takes an argument
+
+choices=["y","no"]
+
 def winorlose(status):
 	#status will be either won or lost - you're passing this in as an argument
-	print("called win or lose")
-	print("+++++++++++++++++++++++++++++++++++++++++")
+	print("————————————")	
+	print("Match Ended")
+	print("————————————")	
 
-	print("You", status, "! Would you like to play again?")
+	print("You", status,"!""Would you like to play again?")
+	print("    _    ____    _    ___ _   _ ___ ")
+	print("   / \  / ___|  / \  |_ _| \ | |__ \ ")
+	print("  / _ \| |  _  / _ \  | ||  \| | / /")
+	print(" / ___ | |_| |/ ___ \ | || |\  ||_| ")
+	print("/_/   \_\____/_/   \_|___|_| \_|(_) ")
+
 	choice = input("Y / N ?")	
 	print(choice)
 
-	if (choice.lower() is "Y"):
-			print("You chose to quit.")
-			exit()
-
-	elif (choice.lower() is "N"):
-			# reset the game so we can start all over again.
-			global player_lives
-			global computer_lives
-			global player
-			global computer
-			global choices
-			player_lives = 1
-			computer_lives = 1
-			player = False
-			computer = choices [randint(0,2)]
+	if (choice is "N") or (choice is "n"):	
+		print("You chose to quit.")
+		exit()
+			
+	elif (choice is "Y") or (choice is "y"):
 		
+		# reset the game so we can start all over again.
+		
+		config.player_lives = 5
+		config.computer_lives = 5
+		player = False
+		computer = choices [randint(0,2)]
+		
+
 	else:
-			print("That's not a valid choice! Input 'Y' or 'N'")
-		
-
-
+		print("Your choice is invalid.")
+		print("Input Y or N!")
+		winorlose(status)
 		
