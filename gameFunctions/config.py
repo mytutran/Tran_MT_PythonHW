@@ -1,7 +1,7 @@
 from random import randint
-def glovar():
-	global computer_lives
-	global player_lives
-	computer_lives = 5
-	player_lives = 5
-	
+
+computer_lives = 5
+player_lives = 5
+choices= ["rock","paper","scissors"]
+computer= choices[randint(0,2)]
+player= False

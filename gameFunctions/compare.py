@@ -1,55 +1,47 @@
 from random import randint
 from gameFunctions import winlose
 from gameFunctions import config
-config.glovar()
 
-def compare():
+
+def compare ():
 	print("———————————————————")	
 	print("Choose your weapon!")
 	print("———————————————————")		
 	
-	player = input("Choose Rock, Paper or Scissors\n")
-	player = player.lower()
-	choices=["rock","paper","scissors"]
-	computer= choices[randint(0,2)]
+	
 
-
-	print("Computer chose", computer, "\n")
-	print("You chose", player, "\n")
-
-
-	if player.lower() == "quit":
+	if config.player.lower() == "quit":
 			exit()
-	elif computer == player: 
+	elif config.computer == config.player: 
 			print("Draw! Fight again!")	
 	
-	elif player.lower() == "rock":
-			if computer == "paper":
-					print("You lose!", computer, "covers", player, "\n")
+	elif config.player.lower() == "rock":
+			if config.computer == "paper":
+					print("You lose!", config.computer, "covers", config.player, "\n")
 					config.player_lives = config.player_lives - 1
 				
 			else:
-					print("You win!", player, "smashes", computer, "\n")
+					print("You win!", config.player, "smashes", config.computer, "\n")
 					config.computer_lives = config.computer_lives - 1
 					
 
-	elif player.lower() == "scissors":
-			if computer == "rock":
-				print("You lose!", computer, "smashes", player, "\n")
+	elif config.player.lower() == "scissors":
+			if config.computer == "rock":
+				print("You lose!", config.computer, "smashes", config.player, "\n")
 				config.player_lives = config.player_lives - 1
 					
 			else:
-					print("You win!", player, "cuts", computer, "\n")
+					print("You win!", config.player, "cuts", config.computer, "\n")
 					config.computer_lives = config.computer_lives - 1
 			
 
-	elif player.lower() == "paper":
-			if computer == "scissors":
-				print("You lose!", computer, "cuts", player, "\n")
+	elif config.player.lower() == "paper":
+			if config.computer == "scissors":
+				print("You lose!", config.computer, "cuts", config.player, "\n")
 				config.player_lives = config.player_lives - 1
 				
 			else:
-					print("You win!", player, "covers", computer, "\n")
+					print("You win!", config.player, "covers", config.computer, "\n")
 					config.computer_lives = config.computer_lives - 1	
 					
 	else:
@@ -65,6 +57,6 @@ def compare():
 
 	else:
 		#need to check all of our conditions after checking for a tie.	
-		player = False
-		computer = choices[randint(0,2)]		
+		config.player = False
+		config.computer = config.choices[randint(0,2)]		
 

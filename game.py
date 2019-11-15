@@ -4,7 +4,6 @@ from random import randint
 from gameFunctions import compare
 from gameFunctions import config
 
-config.glovar()
 
 
 # set up some variables for player and AI lives1
@@ -44,11 +43,11 @@ while player is False:
 
 
 
-	# player = input("Choose Rock, Paper or Scissors\n")
-	# player = player.lower()
+	config.player = input("Choose Rock, Paper or Scissors\n")
+	config.player = config.player.lower()
 
-	# print("Computer chose", computer, "\n")
-	# print("Player chose", player, "\n")
+	print("Computer chose", config.computer, "\n")
+	print("Player chose", config.player, "\n")
  
 	compare.compare()
 

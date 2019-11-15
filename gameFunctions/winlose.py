@@ -1,6 +1,6 @@
 from random import randint
 from gameFunctions import config
-config.glovar()
+
 # define a python function that takes an argument
 
 choices=["y","no"]
@@ -31,8 +31,8 @@ def winorlose(status):
 		
 		config.player_lives = 5
 		config.computer_lives = 5
-		player = False
-		computer = choices [randint(0,2)]
+		config.player = False
+		config.computer = config.choices [randint(0,2)]
 		
 
 	else:
