@@ -2,7 +2,7 @@
 
 ## Pick your weapon and fight to death with the computer - you'll get nothing if you win!
 
-Prerequisites: All you need is [Python3](https://www.python.org/) to play.
+### Prerequisites: All you need is [Python3](https://www.python.org/) to play.
 
 Clone the project, navigate to the correct diretory, - `cd directory name` - and run the `game.py` file in a Pyton Terminal window for macOS/Linux.
 
@@ -16,3 +16,10 @@ The rules are the same as the classic game:
 The computer chooses first, just follow the prompts.
 
 Built with Python3.
+
+### Author
+My Tu Tran
+
+### License
+
+MyTuTran © 2019
